@@ -1,0 +1,14 @@
+Intermediate
+Saved
+*.sdf
+*.opensdf
+*.sln
+*.suo
+*.pdb
+*.exe
+*-DebugGame.dll
+Forge/Binaries/Win64/Forge.exp
+Forge/Binaries/Win64/Forge.lib
+Forge/Releases
+*.log
+*.target.xml

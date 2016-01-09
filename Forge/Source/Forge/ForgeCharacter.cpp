@@ -149,7 +149,9 @@ void AForgeCharacter::Interaction()
 			if (tmpLength < targetLength)
 			{
 				targetLength = tmpLength;
-				targetVector = ActorItr->GetActorLocation();
+//				targetVector = ActorItr->GetActorLocation();
+				targetVector = ActorItr->GetActorLocation() + ActorItr->GetMeshComponent()->GetForwardVector() * 20.0f;
+
 				bNewInterActor = true;
 			}
 		}

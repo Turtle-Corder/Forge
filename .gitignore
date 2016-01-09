@@ -12,3 +12,4 @@ Forge/Binaries/Win64/Forge.lib
 Forge/Releases
 *.log
 *.target.xml
+Forge/Forge.VC.opendb

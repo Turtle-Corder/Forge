@@ -16,6 +16,7 @@ class AForgeCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
 
+	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
 public:
 	AForgeCharacter();
@@ -24,5 +25,36 @@ public:
 	FORCEINLINE class UCameraComponent* GetTopDownCameraComponent() const { return TopDownCameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	/* Key Input */
+
+	virtual void MoveForward(float Val);
+	virtual void MoveRight(float Val);
+
+	virtual void OnMovementModeChanged(EMovementMode PrevMovementMode, uint8 PreviousCustomMode = 0) override;
+
+	void OnStartJump();
+	void OnStopJump();
+
+	UPROPERTY(Transient, Replicated)
+	bool bIsJumping;
+
+	UFUNCTION(BlueprintCallable, Category = "Movement")
+	bool IsInitiatedJump() const;
+
+	void SetIsJumping(bool NewJumping);
+
+	UFUNCTION(Reliable, Server, WithValidation)
+	void ServerSetIsJumping(bool NewJumping);
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	/* Interaction */
+
+	float InteractionRange;
+
+	void Interaction();
 };
 

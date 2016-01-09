@@ -3,7 +3,8 @@
 #ifndef __FORGE_H__
 #define __FORGE_H__
 
-#include "EngineMinimal.h"
+#include "Engine.h"
+#include "Net/UnrealNetwork.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(LogForge, Log, All);
 

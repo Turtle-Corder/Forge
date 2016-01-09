@@ -32,6 +32,10 @@ protected:
 	/** Input handlers for SetDestination action. */
 	void OnSetDestinationPressed();
 	void OnSetDestinationReleased();
+
+	void UsableInView();
+	bool bHasNewFocus;
+	class AUsableActor* FocusedUsableActor;
 };
 
 

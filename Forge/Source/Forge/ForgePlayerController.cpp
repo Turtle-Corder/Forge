@@ -3,6 +3,7 @@
 #include "Forge.h"
 #include "ForgePlayerController.h"
 #include "AI/Navigation/NavigationSystem.h"
+#include "UsableActor.h"
 
 AForgePlayerController::AForgePlayerController()
 {
@@ -19,6 +20,8 @@ void AForgePlayerController::PlayerTick(float DeltaTime)
 	{
 		MoveToMouseCursor();
 	}
+
+	UsableInView();
 }
 
 void AForgePlayerController::SetupInputComponent()
@@ -87,4 +90,37 @@ void AForgePlayerController::OnSetDestinationReleased()
 {
 	// clear flag to indicate we should stop updating the destination
 	bMoveToMouseCursor = false;
+}
+
+void AForgePlayerController::UsableInView()
+{
+	FHitResult Hit;
+	GetHitResultUnderCursor(ECC_Visibility, false, Hit);
+
+	if (Hit.bBlockingHit)
+	{
+		AUsableActor* Usable = Cast<AUsableActor>(Hit.GetActor());
+
+		if (FocusedUsableActor != Usable)
+		{
+			if (FocusedUsableActor)
+			{
+				FocusedUsableActor->OnEndFocus();
+			}
+
+			bHasNewFocus = true;
+		}
+
+		FocusedUsableActor = Usable;
+
+		if (Usable)
+		{
+			if (bHasNewFocus)
+			{
+				Usable->OnBeginFocus();
+
+				bHasNewFocus = false;
+			}
+		}
+	}
 }

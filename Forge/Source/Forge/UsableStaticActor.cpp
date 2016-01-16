@@ -8,6 +8,7 @@ AUsableStaticActor::AUsableStaticActor(const FObjectInitializer& ObjectInitializ
 	: Super(ObjectInitializer)
 {
 	MeshComp = ObjectInitializer.CreateDefaultSubobject<UStaticMeshComponent>(this, TEXT("Mesh"));
+	MeshComp->AttachParent = RootComponent;
 
 	MeshComp->SetSimulatePhysics(true);
 }

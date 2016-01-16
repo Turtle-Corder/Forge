@@ -8,6 +8,8 @@
 AUsableActor::AUsableActor(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
+	RootSceneComp = ObjectInitializer.CreateDefaultSubobject<USceneComponent>(this, TEXT("Root"));
+	RootComponent = RootSceneComp;
 
 }
 

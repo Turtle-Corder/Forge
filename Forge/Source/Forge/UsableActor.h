@@ -11,6 +11,10 @@ class FORGE_API AUsableActor : public AActor
 	GENERATED_BODY()
 
 protected:
+
+	UPROPERTY(VisibleAnywhere, Category = "Root Scene")
+	USceneComponent* RootSceneComp;
+
 	UPROPERTY(VisibleAnywhere, category = "Mesh")
 	UMeshComponent* MeshComp;
 

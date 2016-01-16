@@ -149,8 +149,8 @@ void AForgeCharacter::Interaction()
 			if (tmpLength < targetLength)
 			{
 				targetLength = tmpLength;
-//				targetVector = ActorItr->GetActorLocation();
-				targetVector = ActorItr->GetActorLocation() + ActorItr->GetMeshComponent()->GetForwardVector() * 20.0f;
+				targetVector = ActorItr->GetActorLocation();
+//				targetVector = ActorItr->GetActorLocation() + ActorItr->GetMeshComponent()->GetForwardVector() * 20.0f;
 
 				bNewInterActor = true;
 			}
@@ -167,7 +167,7 @@ void AForgeCharacter::Interaction()
 	}
 
 	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, targetVector.ToString());
-	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, bNewInterActor ? TEXT("true") : TEXT("false"));
+	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, bNewInterActor ? TEXT("true") : TEXT("false"));
 }
 
 void AForgeCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const

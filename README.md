@@ -14,28 +14,28 @@ Department Page : http://game.pcu.ac.kr/
 Team Page : http://igblacksmith.modoo.at/
 
 
-*Designer : Turtle-Coder & Extra-Nero
+*Designer : Turtle-Coder & Extra-Nero & Mintea
 
 *Programmer : Turtle-Coder 
 
-*Artist(Environment) : Extra-Nero
+*Artist : Extra-Nero & Mintea
 
 
 *Folder & File Management Method
 
-»èÁ¦ °¡´É Æú´õ : Binary, Intermediate, Save
+ì‚­ì œ ê°€ëŠ¥ í´ë” : Binary, Intermediate, Save
 
-»èÁ¦ °¡´É ÆÄÀÏ : sdf(IntelliSense)
+ì‚­ì œ ê°€ëŠ¥ íŒŒì¼ : sdf(IntelliSense)
 
 
-Intermediate ´Â ºñÁÖ¾ó ½ºÆ©µğ¿À ÇÁ·ÎÁ§Æ® ÆÄÀÏÀÌ ÀúÀåµÇ¾î ÀÖ±â¶§¹®¿¡,
+Intermediate ëŠ” ë¹„ì£¼ì–¼ ìŠ¤íŠœë””ì˜¤ í”„ë¡œì íŠ¸ íŒŒì¼ì´ ì €ì¥ë˜ì–´ ìˆê¸°ë•Œë¬¸ì—,
  
-´ÙÀ½¿¡ ºñÁÖ¾ó ½ºÆ©µğ¿À¸¦ ÀÌ¿ëÇÏ±â À§ÇØ¼­´Â, 
+ë‹¤ìŒì— ë¹„ì£¼ì–¼ ìŠ¤íŠœë””ì˜¤ë¥¼ ì´ìš©í•˜ê¸° ìœ„í•´ì„œëŠ”, 
 
-ÇÁ·ÎÁ§Æ® ÆÄÀÏÀ» ´Ù½Ã »ı¼ºÇÒ ÇÊ¿ä°¡ ÀÖ½À´Ï´Ù. 
+í”„ë¡œì íŠ¸ íŒŒì¼ì„ ë‹¤ì‹œ ìƒì„±í•  í•„ìš”ê°€ ìˆìŠµë‹ˆë‹¤. 
 
-»ı¼º ¹æ¹ıÀº ·çÆ® µğ·ºÅä¸®¿¡ º¸¸é [ÇÁ·ÎÁ§Æ®ÀÌ¸§].uproject ÆÄÀÏÀÌ ÀÖÀ»ÅÙµ¥, 
+ìƒì„± ë°©ë²•ì€ ë£¨íŠ¸ ë””ë ‰í† ë¦¬ì— ë³´ë©´ [í”„ë¡œì íŠ¸ì´ë¦„].uproject íŒŒì¼ì´ ìˆì„í…ë°, 
 
-¿ìÅ¬¸¯ÇØº¸¸é, Gernerate VisualStudio Project files ¸Ş´º°¡ ³ª¿ÃÅÙµ¥, 
+ìš°í´ë¦­í•´ë³´ë©´, Gernerate VisualStudio Project files ë©”ë‰´ê°€ ë‚˜ì˜¬í…ë°, 
 
-ÀÌ°É·Î ºñÁÖ¾ó ½ºÆ©µğ¿À ÇÁ·ÎÁ§Æ® ÆÄÀÏÀ» Àç»ı¼ºÇØÁÖ¸é µË´Ï´Ù.
+ì´ê±¸ë¡œ ë¹„ì£¼ì–¼ ìŠ¤íŠœë””ì˜¤ í”„ë¡œì íŠ¸ íŒŒì¼ì„ ì¬ìƒì„±í•´ì£¼ë©´ ë©ë‹ˆë‹¤.

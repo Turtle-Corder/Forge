@@ -147,43 +147,7 @@ bool AForgeCharacter::ServerSetIsJumping_Validate(bool NewJumping)
 
 
 void AForgeCharacter::Interaction()
-{
-	/*
-	float targetLength = 999.0f;
-	FVector targetVector;
-
-	bool bNewInteractiveActor = false;
-	
-	for (TActorIterator<AUsableActor> ActorItr(GetWorld()); ActorItr; ++ActorItr)
-	{
-		float tmpLength = FVector::Dist(ActorItr->GetActorLocation(), GetActorLocation());
-
-		if (tmpLength < InteractionRange)
-		{
-			if (tmpLength < targetLength)
-			{
-				targetLength = tmpLength;
-				targetVector = ActorItr->GetActorLocation();
-//				targetVector = ActorItr->GetActorLocation() + ActorItr->GetMeshComponent()->GetForwardVector() * 20.0f;
-
-				bNewInteractiveActor = true;
-			}
-		}
-	}
-	
-
-	GetWorld()->Trace
-
-	if (bNewInteractiveActor)
-	{
-		UNavigationSystem* const NavSys = GetWorld()->GetNavigationSystem();
-		if (NavSys)
-		{
-			NavSys->SimpleMoveToLocation(Controller, targetVector);
-		}
-	}
-	*/
-	
+{	
 	const FRotator Rotation = Controller->GetControlRotation();
 	const FVector Direction = FRotationMatrix(Rotation).GetScaledAxis(EAxis::X);
 	

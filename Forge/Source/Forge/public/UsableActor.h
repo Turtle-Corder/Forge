@@ -5,7 +5,7 @@
 #include "GameFramework/Actor.h"
 #include "UsableActor.generated.h"
 
-UCLASS()
+UCLASS(ABSTRACT)
 class FORGE_API AUsableActor : public AActor
 {
 	GENERATED_BODY()
@@ -17,6 +17,23 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, category = "Mesh")
 	UMeshComponent* MeshComp;
+
+	UPROPERTY()
+	APostProcessVolume* PPvolume;
+
+	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, category = "PostProcess")
+	UMaterial* PPMat;
+
+	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, category = "PostProcess")
+	FName PPColorParam;
+
+	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, category = "PostProcess")
+	FLinearColor OutlineColor;
+	
+	UPROPERTY(BlueprintReadOnly, category = "PostProcess")
+	UMaterialInstanceDynamic* PPvInst;
+
+	virtual void BeginPlay() override;
 
 public:	
 	// Sets default values for this actor's properties

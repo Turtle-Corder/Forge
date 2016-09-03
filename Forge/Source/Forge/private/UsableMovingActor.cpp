@@ -13,7 +13,6 @@ AUsableMovingActor::AUsableMovingActor(const FObjectInitializer& ObjectInitializ
 	MeshComp = ObjectInitializer.CreateDefaultSubobject<USkeletalMeshComponent>(this, TEXT("Mesh"));
 	MeshComp->SetupAttachment(GetRootComponent());
 
-	/*
 	CollisionComp = ObjectInitializer.CreateDefaultSubobject<USphereComponent>(this, TEXT("Collision"));
 	CollisionComp->SetupAttachment(GetRootComponent());
 	CollisionComp->SetSphereRadius(110.0f);
@@ -21,25 +20,18 @@ AUsableMovingActor::AUsableMovingActor(const FObjectInitializer& ObjectInitializ
 
 	CollisionComp->OnComponentBeginOverlap.AddDynamic(this, &AUsableMovingActor::OnOverlapBegin);
 	CollisionComp->OnComponentEndOverlap.AddDynamic(this, &AUsableMovingActor::OnOverlapEnd);
-	*/
+	
+	MarkerColor = FLinearColor::White;
 }
 
-/*
+
 void AUsableMovingActor::OnOverlapBegin(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	AForgeCharacter* MyPawn = Cast<AForgeCharacter>(OtherActor);
 
 	if (MyPawn)
 	{
-		if (UnderMarkerFX)
-		{
-			UnderMarkerPSC = UGameplayStatics::SpawnEmitterAtLocation(this, UnderMarkerFX, GetActorLocation());
-			UnderMarkerPSC->ActivateSystem(true);
-
-			GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Blue, TEXT("Spawn Activate"));
-
-			GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, CollisionComp->GetComponentLocation().ToString());
-		}
+		ActivateMarker();
 	}
 }
 
@@ -49,15 +41,10 @@ void AUsableMovingActor::OnOverlapEnd(class UPrimitiveComponent* HitComp, class 
 
 	if (MyPawn)
 	{
-		if (UnderMarkerPSC)
-		{
-			UnderMarkerPSC->DeactivateSystem();
-
-			GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, TEXT("Spawn Deactivate"));
-		}
+		DeActivateMarker();
 	}
 }
-*/
+
 
 void AUsableMovingActor::ActivateMarker()
 {
@@ -65,6 +52,9 @@ void AUsableMovingActor::ActivateMarker()
 	{
 		UnderMarkerPSC = UGameplayStatics::SpawnEmitterAtLocation(this, UnderMarkerFX, GetActorLocation());
 		UnderMarkerPSC->ActivateSystem(true);
+
+		FName ColorParam = TEXT("SetupColor");
+		UnderMarkerPSC->SetVectorParameter(ColorParam, FVector(MarkerColor));
 
 		GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Blue, TEXT("Spawn Activate"));
 

@@ -1,8 +1,8 @@
 {
 	"Changelist" : 3039270,
-	"BuildId" : "5f33f0f4-c45b-4931-b62d-5ae67e299f76",
+	"BuildId" : "9c2989ac-a255-4ac8-bc49-1a4e547a2ffe",
 	"Modules" : 
 	{
-		"Forge" : "UE4Editor-Forge-1951.dll"
+		"Forge" : "UE4Editor-Forge.dll"
 	}
 }

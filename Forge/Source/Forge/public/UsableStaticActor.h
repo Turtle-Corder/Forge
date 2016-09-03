@@ -8,7 +8,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(ABSTRACT, Blueprintable)
 class FORGE_API AUsableStaticActor : public AUsableActor
 {
 	GENERATED_BODY()

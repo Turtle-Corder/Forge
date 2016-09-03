@@ -2,7 +2,7 @@
 	"TargetName" : "ForgeEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "5f33f0f4-c45b-4931-b62d-5ae67e299f76",
+	"BuildId" : "9c2989ac-a255-4ac8-bc49-1a4e547a2ffe",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -15,15 +15,15 @@
 	"BuildProducts" :
 	[
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-Forge-1951.dll",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-Forge.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-Forge-1951.pdb",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-Forge.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-Forge-1951.lib",
+			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-Forge.lib",
 			"Type" : "ImportLibrary"
 		}
 	],

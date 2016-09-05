@@ -84,12 +84,20 @@ void AForgePlayerController::OnSetDestinationPressed()
 {
 	// set flag to keep updating destination until released
 	bMoveToMouseCursor = true;
+
+	
 }
 
 void AForgePlayerController::OnSetDestinationReleased()
 {
 	// clear flag to indicate we should stop updating the destination
 	bMoveToMouseCursor = false;
+	/*
+	if (GetMouseCursor() == EMouseCursor::Default)
+	{
+
+	}
+	*/
 }
 
 void AForgePlayerController::UsableInView()

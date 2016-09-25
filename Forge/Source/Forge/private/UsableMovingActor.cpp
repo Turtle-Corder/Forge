@@ -2,7 +2,7 @@
 
 #include "Forge.h"
 #include "UsableMovingActor.h"
-#include "ForgeCharacter.h"
+#include "MeleeCharacter.h"
 
 
 
@@ -27,7 +27,7 @@ AUsableMovingActor::AUsableMovingActor(const FObjectInitializer& ObjectInitializ
 
 void AUsableMovingActor::OnOverlapBegin(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	AForgeCharacter* MyPawn = Cast<AForgeCharacter>(OtherActor);
+	AMeleeCharacter* MyPawn = Cast<AMeleeCharacter>(OtherActor);
 
 	if (MyPawn)
 	{
@@ -37,7 +37,7 @@ void AUsableMovingActor::OnOverlapBegin(class UPrimitiveComponent* HitComp, clas
 
 void AUsableMovingActor::OnOverlapEnd(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
-	AForgeCharacter* MyPawn = Cast<AForgeCharacter>(OtherActor);
+	AMeleeCharacter* MyPawn = Cast<AMeleeCharacter>(OtherActor);
 
 	if (MyPawn)
 	{

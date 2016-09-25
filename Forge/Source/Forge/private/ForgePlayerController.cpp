@@ -8,7 +8,7 @@
 AForgePlayerController::AForgePlayerController()
 {
 	bShowMouseCursor = true;
-	DefaultMouseCursor = EMouseCursor::Crosshairs;
+	DefaultMouseCursor = EMouseCursor::Default;
 }
 
 void AForgePlayerController::PlayerTick(float DeltaTime)

@@ -36,6 +36,12 @@ protected:
 	void UsableInView();
 	bool bHasNewFocus;
 	class AUsableActor* FocusedUsableActor;
+
+public:
+	FORCEINLINE class AUsableActor* GetFocusedUsableActor() 
+	{
+		return FocusedUsableActor;
+	}
 };
 
 
